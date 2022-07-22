@@ -17,7 +17,7 @@ namespace VendAndTrack.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("test", "test2", 1);
+      Order newOrder = new Order("test", "test2", "1");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -27,7 +27,7 @@ namespace VendAndTrack.Tests
       // Arrange
       string description = "3 croissants";
       string name = "Marks order";
-      int price = 3;
+      string price = "3";
       Order newOrder = new Order(description, name, price);
 
       // Act
@@ -43,7 +43,7 @@ namespace VendAndTrack.Tests
       //Arrange
       string description = "Walk the dog.";
       string name = "Marks order";
-      int price = 3;
+      string price = "3";
       Order newOrder = new Order(description, name, price);
 
       //Act
@@ -75,9 +75,9 @@ namespace VendAndTrack.Tests
       string description01 = "Walk the dog";
       string description02 = "Wash the dishes";
       string name = "Marks order";
-      int price = 3;
+      string price = "3";
       string name1 = "Maxs order";
-      int price1 = 4;
+      string price1 = "4";
       Order newOrder1 = new Order(description01, name, price);
       Order newOrder2 = new Order(description02, name1, price1);
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
@@ -95,7 +95,7 @@ namespace VendAndTrack.Tests
       //Arrange
       string description = "3 croissants";
       string name = "Marks order";
-      int price = 3;
+      string price = "3";
       Order newOrder = new Order(description, name, price);
 
       //Act
@@ -112,9 +112,9 @@ namespace VendAndTrack.Tests
       string description01 = "Walk the dog";
       string description02 = "Wash the dishes";
       string name = "Marks order";
-      int price = 3;
+      string price = "3";
       string name1 = "Maxs order";
-      int price1 = 4;
+      string price1 = "4";
       Order newOrder1 = new Order(description01, name, price);
       Order newOrder2 = new Order(description02, name1, price1);
 

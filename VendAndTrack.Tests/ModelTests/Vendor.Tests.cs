@@ -97,7 +97,7 @@ namespace VendAndTrack.Tests
       //Arrange
       string description = "3 croissants";
       string name = "Marks order";
-      int price = 3;
+      string price = "3";
       Order newOrder = new Order(description, name, price);
       List<Order> newList = new List<Order> { newOrder };
       string name01 = "chucks";
