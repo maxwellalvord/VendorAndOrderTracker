@@ -35,11 +35,11 @@ namespace VendAndTrack.Controllers
 
       Vendor selectedVendor = Vendor.Find(id);
 
-      List<Order> categoryOrders = selectedVendor.Orders;
+      List<Order> vendorOrders = selectedVendor.Orders;
 
       model.Add("vendor", selectedVendor);
 
-      model.Add("order", categoryOrders);
+      model.Add("orders", vendorOrders);
 
       return View(model);
     }
@@ -52,7 +52,7 @@ namespace VendAndTrack.Controllers
       Order newOrder = new Order(orderDescription, orderName, orderPrice);
       foundVendor.AddOrder(newOrder);
       List<Order> vendorOrders = foundVendor.Orders;
-      model.Add("order", vendorOrders);
+      model.Add("orders", vendorOrders);
       model.Add("vendor", foundVendor);
       return View("Show", model);
     }
