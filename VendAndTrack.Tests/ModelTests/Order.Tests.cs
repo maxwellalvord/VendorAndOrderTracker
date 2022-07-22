@@ -16,10 +16,26 @@ namespace VendAndTrack.Tests
     // }
 
     [TestMethod]
-    public void ItemConstructor_CreatesInstanceOfItem_Item()
+    public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newItem = new Order("test");
-      Assert.AreEqual(typeof(Order), newItem.GetType());
+      Order newOrder = new Order("test", "test2", 1);
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
+
+    [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      // Arrange
+      string description = "3 croissants";
+      string name = "Marks order";
+      int price = 3;
+      Order newOrder = new Order(description, name, price);
+
+      // Act
+      string result = newOrder.Description;
+
+      // Assert
+      Assert.AreEqual(description, result);
     }
 
   }
