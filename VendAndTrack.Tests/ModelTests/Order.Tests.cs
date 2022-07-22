@@ -69,7 +69,7 @@ namespace VendAndTrack.Tests
     }
 
     [TestMethod]
-     public void GetAll_ReturnsItems_ItemList()
+     public void GetAll_ReturnsOrders_OrderList()
     {
       //Arrange
       string description01 = "Walk the dog";
@@ -87,6 +87,22 @@ namespace VendAndTrack.Tests
 
       //Assert
       CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+    public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      //Arrange
+      string description = "3 croissants";
+      string name = "Marks order";
+      int price = 3;
+      Order newOrder = new Order(description, name, price);
+
+      //Act
+      int result = newOrder.Id;
+
+      //Assert
+      Assert.AreEqual(1, result);
     }
 
   }
