@@ -3,10 +3,10 @@ using System;
 using System.Collections.Generic;
 using VendAndTrack.Models;
 
-namespace ToDoList.Tests
+namespace VendAndTrack.Tests
 {
   [TestClass]
-  public class ItemTests 
+  public class OrderTests 
   // : IDisposable
   {
 
