@@ -14,6 +14,7 @@ namespace VendAndTrack.Tests
       Vendor.ClearAll();
     }
 
+
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
