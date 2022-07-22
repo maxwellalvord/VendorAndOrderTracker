@@ -10,5 +10,11 @@ namespace VendAndTrack.Controllers
     {
       return View();
     }
+
+    [HttpGet("/info")]
+    public ActionResult Info()
+    {
+      return View();
+    }
   }
 }
