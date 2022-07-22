@@ -38,5 +38,21 @@ namespace VendAndTrack.Tests
       //Assert
       Assert.AreEqual(name, result);
     }
+
+    [TestMethod]
+    public void GetId_ReturnsVendorId_Int()
+    {
+      //Arrange
+      string name = "chucks";
+      string description = "mexican food";
+      Vendor newVendor = new Vendor(name, description);
+
+
+      //Act
+      int result = newVendor.Id;
+
+      //Assert
+      Assert.AreEqual(1, result);
+    }
   }
 }
