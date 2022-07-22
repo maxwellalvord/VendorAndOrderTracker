@@ -34,7 +34,7 @@ namespace Template
 
       app.Run(async (context) =>
       {
-        await context.Response.WriteAsync("Hello World!");
+        await context.Response.WriteAsync("Page failed to load!");
       });
     }
   }
