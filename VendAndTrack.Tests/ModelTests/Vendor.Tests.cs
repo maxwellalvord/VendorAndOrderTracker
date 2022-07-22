@@ -73,5 +73,23 @@ namespace VendAndTrack.Tests
       //Assert
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectCategory_Category()
+    {
+      //Arrange
+       string name01 = "Work";
+      string name02 = "School";
+      string descript1 = "ball";
+      string descript02 = "dog";
+      Vendor newVendor1 = new Vendor(name01, descript1);
+      Vendor newVendor2 = new Vendor(name02, descript02);
+
+      //Act
+      Vendor result = Vendor.Find(2);
+
+      //Assert
+      Assert.AreEqual(newVendor2, result);
+    }
   }
 }
