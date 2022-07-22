@@ -6,14 +6,13 @@ using VendAndTrack.Models;
 namespace VendAndTrack.Tests
 {
   [TestClass]
-  public class OrderTests 
-  // : IDisposable
+  public class OrderTests : IDisposable
   {
 
-    // public void Dispose()
-    // {
-    //   Item.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
 
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
@@ -54,6 +53,20 @@ namespace VendAndTrack.Tests
 
       //Assert
       Assert.AreEqual(updatedDescription, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      // Arrange
+      List<Order> newList = new List<Order> { };
+      // Console.WriteLine(newList.Count);
+      // Act
+      List<Order> result = Order.GetAll();
+      // Console.WriteLine(result.Count);
+
+      // Assert
+      CollectionAssert.AreEqual(newList, result);
     }
 
   }
