@@ -38,5 +38,23 @@ namespace VendAndTrack.Tests
       Assert.AreEqual(description, result);
     }
 
+    [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+      //Arrange
+      string description = "Walk the dog.";
+      string name = "Marks order";
+      int price = 3;
+      Order newOrder = new Order(description, name, price);
+
+      //Act
+      string updatedDescription = "Do the dishes";
+      newOrder.Description = updatedDescription;
+      string result = newOrder.Description;
+
+      //Assert
+      Assert.AreEqual(updatedDescription, result);
+    }
+
   }
 }
