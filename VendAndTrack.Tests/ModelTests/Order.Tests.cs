@@ -60,12 +60,32 @@ namespace VendAndTrack.Tests
     {
       // Arrange
       List<Order> newList = new List<Order> { };
-      // Console.WriteLine(newList.Count);
+      
       // Act
       List<Order> result = Order.GetAll();
-      // Console.WriteLine(result.Count);
 
       // Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+     public void GetAll_ReturnsItems_ItemList()
+    {
+      //Arrange
+      string description01 = "Walk the dog";
+      string description02 = "Wash the dishes";
+      string name = "Marks order";
+      int price = 3;
+      string name1 = "Maxs order";
+      int price1 = 4;
+      Order newOrder1 = new Order(description01, name, price);
+      Order newOrder2 = new Order(description02, name1, price1);
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
+
+      //Act
+      List<Order> result = Order.GetAll();
+
+      //Assert
       CollectionAssert.AreEqual(newList, result);
     }
 
