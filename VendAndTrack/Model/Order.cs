@@ -12,9 +12,9 @@ namespace VendAndTrack.Models
 
     public Order (string description, string name, int price)
     {
+      Description = description;
       Name = name;
       Price = price;
-      Description = description;
       _instances.Add(this);
       Id = _instances.Count;
     }
