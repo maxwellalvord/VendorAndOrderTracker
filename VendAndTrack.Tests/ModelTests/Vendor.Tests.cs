@@ -75,7 +75,7 @@ namespace VendAndTrack.Tests
     }
 
     [TestMethod]
-    public void Find_ReturnsCorrectCategory_Category()
+    public void Find_ReturnsCorrectVendor_Vendor()
     {
       //Arrange
        string name01 = "Work";
@@ -90,6 +90,26 @@ namespace VendAndTrack.Tests
 
       //Assert
       Assert.AreEqual(newVendor2, result);
+    }
+    [TestMethod]
+    public void AddItem_AssociatesItemWithCategory_ItemList()
+    {
+      //Arrange
+      string description = "3 croissants";
+      string name = "Marks order";
+      int price = 3;
+      Order newOrder = new Order(description, name, price);
+      List<Order> newList = new List<Order> { newOrder };
+      string name01 = "chucks";
+      string description01 = "mexican food";
+      Vendor newVendor = new Vendor(name01, description01);
+      newVendor.AddOrder(newOrder);
+
+      //Act
+      List<Order> result = newVendor.Orders;
+
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
