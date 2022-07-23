@@ -8,19 +8,16 @@ namespace VendAndTrack.Tests
   [TestClass]
   public class OrderTests : IDisposable
   {
-
     public void Dispose()
     {
       Order.ClearAll();
     }
-
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
       Order newOrder = new Order("test", "test2", "1");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
-
     [TestMethod]
     public void GetDescription_ReturnsDescription_String()
     {
@@ -36,7 +33,6 @@ namespace VendAndTrack.Tests
       // Assert
       Assert.AreEqual(description, result);
     }
-
     [TestMethod]
     public void SetDescription_SetDescription_String()
     {
@@ -54,7 +50,6 @@ namespace VendAndTrack.Tests
       //Assert
       Assert.AreEqual(updatedDescription, result);
     }
-
     [TestMethod]
     public void GetAll_ReturnsEmptyList_OrderList()
     {
@@ -67,7 +62,6 @@ namespace VendAndTrack.Tests
       // Assert
       CollectionAssert.AreEqual(newList, result);
     }
-
     [TestMethod]
      public void GetAll_ReturnsOrders_OrderList()
     {
@@ -88,7 +82,6 @@ namespace VendAndTrack.Tests
       //Assert
       CollectionAssert.AreEqual(newList, result);
     }
-
     [TestMethod]
     public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
     {
@@ -104,7 +97,6 @@ namespace VendAndTrack.Tests
       //Assert
       Assert.AreEqual(1, result);
     }
-
     [TestMethod]
     public void Find_ReturnsCorrectOrder_Order()
     {
@@ -124,6 +116,5 @@ namespace VendAndTrack.Tests
       //Assert
       Assert.AreEqual(newOrder2, result);
     }
-
   }
 }
