@@ -13,7 +13,7 @@
 * ASP.NET Core
 
 ## Description
-This Webpage allows "Pierre" to add his vendors/clients and their description to the website. After a new vendor is added the user may click on the vendor to be able to add orders details such as A Name, a price, and a description for the order. User will have access to a list of vendors and thus is orders!
+This Webpage allows "Pierre" to add his vendors/clients and their description to the website. After a new vendor is added the user may click on the vendor to be able to add orders details such as A Name, a price, and a description for the order. User will have access to a list of vendors and thus its orders!
 
 ## Setup/Installation Requirements
 
